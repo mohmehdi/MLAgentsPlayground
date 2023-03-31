@@ -9,13 +9,13 @@ Please refer to the [official ML-Agents documentation](https://github.com/Unity-
 ## Requirements
 
 The following dependencies are required to run the projects in this repository:
-
-- unity==2021.3.19f1
-- mlagents==0.29.0
-- mlagents-envs==0.29.0
-- numpy==1.21.2
-- torch==1.7.1+cu110
-
+```c
+unity==2021.3.19f1
+mlagents==0.29.0
+mlagents-envs==0.29.0
+numpy==1.21.2
+torch==1.7.1+cu110
+```
 If you are unable to install torch using pip due to its size, you can download it from [here](https://download.pytorch.org/whl/torch_stable.html).
 
 ## Projects
