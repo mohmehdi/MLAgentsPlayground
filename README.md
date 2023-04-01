@@ -28,12 +28,12 @@ This repository contains the following projects:
 ## Usage
 To train the agent using the provided configuration file, run:
 ```
-ml-agents config/move3d.yaml --run-id=some_name
+mlagents-learn config/move3d.yaml --run-id=some_name
 ```
 To initialize training from an existing brain, run:
 
 ```
-ml-agents config/Training_config.yaml --initialize-from=BrainName --run-id=SomeName
+mlagents-learn config/Training_config.yaml --initialize-from=BrainName --run-id=SomeName
 ```
 Replace `BrainName` with the name of the brain to use as a starting point and `SomeName` with your desired run ID. Check results/run-id for the model checkpoints and training stats. Experiment with different hyperparameters and settings in the config file. Have fun exploring!
 

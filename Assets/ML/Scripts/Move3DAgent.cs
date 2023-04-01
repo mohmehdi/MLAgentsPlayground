@@ -28,7 +28,7 @@ public class Move3DAgent : Agent
         _transform.localEulerAngles = Vector3.zero;
         _agentRB.velocity = Vector3.zero;
         _agentRB.angularVelocity = Vector3.zero;
-        targetTransform.localPosition=new Vector3(Random.Range(-9,9),Random.Range(-9,9),Random.Range(5,10));
+        targetTransform.localPosition=new Vector3(Random.Range(-9,9),Random.Range(-9,9),Random.Range(5,30));
     }
     public override void CollectObservations(VectorSensor sensor)
     {
@@ -45,7 +45,8 @@ public class Move3DAgent : Agent
         _agentRB.AddRelativeTorque(new Vector3(rotX,rotZ,0)*rotateSpeed); 
         float dot = Vector3.Dot(_transform.forward,targetTransform.forward);
         float distance = (_transform.position-targetTransform.position).sqrMagnitude;
-        // AddReward((-distance/1000)+dot);
+        AddReward(dot);
+        AddReward(-1);
     }
     public override void Heuristic(in ActionBuffers actionsOut)
     {
